@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Iniciar Sesión</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Consult" xml:space="preserve">
+    <value>Consultar</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenido</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="InputAccount" xml:space="preserve">
+    <value>Ingrese a su Cuenta</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Correcto</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reiniciar Password</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Incorrecto</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Rechazado</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Resultado</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="SecurityCode" xml:space="preserve">
+    <value>Código de Seguridad </value>
+  </data>
+  <data name="SessionInited" xml:space="preserve">
+    <value>Sesion iniciada</value>
+  </data>
+  <data name="TradeCode" xml:space="preserve">
+    <value>Código de Comercio</value>
+  </data>
+  <data name="AlreadySignedUp" xml:space="preserve">
+    <value>¿Ya se encuentra Registrado?</value>
+  </data>
+  <data name="FirstTime" xml:space="preserve">
+    <value>¿Todavía no se Registro?</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Recordarme?</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Registrarse</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nombre Usuario</value>
+  </data>
+  <data name="LogInForm" xml:space="preserve">
+    <value>Formulario de Inicio de Sesión</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Cuenta</value>
+  </data>
+  <data name="AplicationName" xml:space="preserve">
+    <value>Wed de Comercio</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Crear Nueva Cuenta</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="MyCredits" xml:space="preserve">
+    <value>Mis Creditos</value>
+  </data>
+  <data name="MyInfo" xml:space="preserve">
+    <value>Mis Datos</value>
+  </data>
+  <data name="RegisterNewUser" xml:space="preserve">
+    <value>Registrar Nuevo Usuario</value>
+  </data>
+  <data name="UseLocalAccount" xml:space="preserve">
+    <value>Ingrese a su cuenta para iniciar Sesion.</value>
+  </data>
+  <data name="Consuption" xml:space="preserve">
+    <value>CONSUMO</value>
+  </data>
+  <data name="CUIT" xml:space="preserve">
+    <value>C.U.I.T.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Domicilio</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Monto</value>
+  </data>
+  <data name="BetweenStreets" xml:space="preserve">
+    <value>Entre Calles</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Fecha Nac.</value>
+  </data>
+  <data name="CreditsDetails" xml:space="preserve">
+    <value>Detalles de Creditos</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="DNI" xml:space="preserve">
+    <value>DNI</value>
+  </data>
+  <data name="DocNumber" xml:space="preserve">
+    <value>Nro. Doc.</value>
+  </data>
+  <data name="DocType" xml:space="preserve">
+    <value>Tipo Doc.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Apellido y Nombre(s)</value>
+  </data>
+  <data name="Housing" xml:space="preserve">
+    <value>Vivienda</value>
+  </data>
+  <data name="LaboralData" xml:space="preserve">
+    <value>Datos Laborales</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Localidad</value>
+  </data>
+  <data name="MaritalStatus" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nacionalidad</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="Ocupation" xml:space="preserve">
+    <value>Ocupación</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Datos Particulares</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Planes</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>Cód.Postal</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="Quotas" xml:space="preserve">
+    <value>Cuotas</value>
+  </data>
+  <data name="Relation" xml:space="preserve">
+    <value>Relacion</value>
+  </data>
+  <data name="RequestData" xml:space="preserve">
+    <value>Datos de la Solicitud</value>
+  </data>
+  <data name="ReturnCreditsDetails" xml:space="preserve">
+    <value>Regresar a Detalle de Creditos</value>
+  </data>
+  <data name="SelectSeller" xml:space="preserve">
+    <value>Seleccionar Vendedor</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Vendedor</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Subsidiary" xml:space="preserve">
+    <value>Sucursal</value>
+  </data>
+  <data name="TaxQuotes" xml:space="preserve">
+    <value>Imp. Cuotas</value>
+  </data>
+  <data name="Tel" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="Tel2" xml:space="preserve">
+    <value>Telefono 2</value>
+  </data>
+  <data name="Tel3" xml:space="preserve">
+    <value>Telefono 3</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="CorrectSendData" xml:space="preserve">
+    <value>La infomación fue enviada correctamente!</value>
+  </data>
+  <data name="CreditIncrease" xml:space="preserve">
+    <value>Alta de Crédito</value>
+  </data>
+  <data name="Document" xml:space="preserve">
+    <value>Documento</value>
+  </data>
+  <data name="IncorrectSendData" xml:space="preserve">
+    <value>La información no pudo ser enviada.. Reintente mas tarde</value>
+  </data>
+  <data name="MonthlyIncome" xml:space="preserve">
+    <value>Ingreso Mensual</value>
+  </data>
+  <data name="MyCreditsDetail" xml:space="preserve">
+    <value>Detalle de Créditos</value>
+  </data>
+  <data name="NewCredit" xml:space="preserve">
+    <value>Nuevo Crédito</value>
+  </data>
+  <data name="RequestedAmount" xml:space="preserve">
+    <value>Monto Solicitado</value>
+  </data>
+  <data name="SelectSex" xml:space="preserve">
+    <value>Seleccionar Sexo</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="SelectOcupation" xml:space="preserve">
+    <value>Seleccionar Ocupacion</value>
+  </data>
+  <data name="CompleteCredit" xml:space="preserve">
+    <value>Completar Informacion del Credito</value>
+  </data>
+  <data name="ValidationExist" xml:space="preserve">
+    <value>El Datos de Identidad ya fueron verificados!</value>
+  </data>
+  <data name="CUIL" xml:space="preserve">
+    <value>CUIL</value>
+  </data>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="CodeResult" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="CorrectQuestions" xml:space="preserve">
+    <value>Preguntas Correctas</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identificación</value>
+  </data>
+  <data name="PercentageAcquired" xml:space="preserve">
+    <value>% Aciertos Obtenidos</value>
+  </data>
+  <data name="PercentageRequired" xml:space="preserve">
+    <value>% Aciertos Requeridos</value>
+  </data>
+  <data name="Quests" xml:space="preserve">
+    <value>Preguntas</value>
+  </data>
+  <data name="R" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>Tiempo de Repuesta :</value>
+  </data>
+  <data name="ValidateIdentity" xml:space="preserve">
+    <value>Validacion de Identidad</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validacion</value>
+  </data>
+  <data name="ValidationRejected" xml:space="preserve">
+    <value>Validacion Rechazada!</value>
+  </data>
+  <data name="ValidationResult" xml:space="preserve">
+    <value>Resultado de Validación</value>
+  </data>
+  <data name="CorrectSaveData" xml:space="preserve">
+    <value>El Formulario fue Guardado Satisfactoriamente</value>
+  </data>
+  <data name="InCorrectSaveData" xml:space="preserve">
+    <value>Error! El Formulario no pudo ser Guardado</value>
+  </data>
+  <data name="AdmissionDate" xml:space="preserve">
+    <value>Fecha Ingreso</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="JobField" xml:space="preserve">
+    <value>Rubro</value>
+  </data>
+  <data name="MontlyIncome" xml:space="preserve">
+    <value>Ingresos</value>
+  </data>
+  <data name="WorkAddress" xml:space="preserve">
+    <value>Domi. Laboral</value>
+  </data>
+  <data name="WorkFile" xml:space="preserve">
+    <value>Legajo</value>
+  </data>
+  <data name="WorkingTel" xml:space="preserve">
+    <value>Tel. Laboral</value>
+  </data>
+  <data name="SessionExpired" xml:space="preserve">
+    <value>La Session Expiro!</value>
+  </data>
+  <data name="Annulled" xml:space="preserve">
+    <value>ANU</value>
+  </data>
+  <data name="CheckData" xml:space="preserve">
+    <value>Chequear los datos Ingresados</value>
+  </data>
+  <data name="CommercePreAuthorized" xml:space="preserve">
+    <value>PCO</value>
+  </data>
+  <data name="FormSaved" xml:space="preserve">
+    <value>El Formulario se guardo exitosamente!</value>
+  </data>
+  <data name="OKPreAuthorized" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PendingPreAuthorized" xml:space="preserve">
+    <value>PEN</value>
+  </data>
+  <data name="PreAuthorizedCredit" xml:space="preserve">
+    <value>Credito Pre-Autorizado! Continuar con la Validacion de Identidad</value>
+  </data>
+  <data name="PreAuthorizedCreditAnulled" xml:space="preserve">
+    <value>La Pre-Autorizacion del Credito ha sido Anulada</value>
+  </data>
+  <data name="CreditForm" xml:space="preserve">
+    <value>Formulario de Pre-Aprobacion de Credito</value>
+  </data>
+  <data name="IdentityValidator" xml:space="preserve">
+    <value>Formulario para Validacion de Identidades</value>
+  </data>
+  <data name="ReturnNewCredit" xml:space="preserve">
+    <value>Regresar a Alta de Creditos</value>
+  </data>
+  <data name="FormSavedPending" xml:space="preserve">
+    <value>Autorizacion pendiente de aprobacion, Verificar estado</value>
+  </data>
+  <data name="RejectPreAuthorized" xml:space="preserve">
+    <value>REC</value>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>Enviando Solicitud..</value>
+  </data>
+  <data name="MessageMaxLength" xml:space="preserve">
+    <value>El valor no debe ser mayor a {0} digitos</value>
+  </data>
+  <data name="MessageMinLength" xml:space="preserve">
+    <value>El valor no debe ser menor a {0} digitos</value>
+  </data>
+  <data name="MessageRequired" xml:space="preserve">
+    <value>Campo Requerido</value>
+  </data>
+  <data name="CommerceCreditInfo" xml:space="preserve">
+    <value>Informacion Crediticia del Comercio.</value>
+  </data>
+  <data name="CommerceData" xml:space="preserve">
+    <value>Datos del Comercio.</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Femenino</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="RequiredData" xml:space="preserve">
+    <value>* Datos requeridos</value>
+  </data>
+  <data name="MessageMail" xml:space="preserve">
+    <value>Ingrese una direccion de mail valida</value>
+  </data>
+  <data name="MessageNumber" xml:space="preserve">
+    <value>Ingrese solo valores numericos</value>
+  </data>
+  <data name="IdUser" xml:space="preserve">
+    <value>Id Usuario</value>
+  </data>
+</root>

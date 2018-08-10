@@ -1,0 +1,413 @@
+﻿body {
+    font-size: 13px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+.modal {
+    overflow-y: hidden;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+
+/*Credipaz Custom CSS*/
+
+/*#region navbar*/
+
+label a {
+    color: red;
+}
+
+.example6 .navbar-brand {
+    background: #db137e url('../Images/Credipaz-Logo.png') center / contain no-repeat;
+    height: 40px;
+    width: 250px;
+    margin-top: 5px;
+}
+
+.navbar-inverse {
+    background-color: #db137e;
+    border-color: #080808;
+}
+
+    .navbar-inverse .navbar-text {
+        color: #ffffff;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+        background-color: #db137e;
+    }
+
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        color: #ffffff;
+        background-color: #bd126d;
+    }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #db137e;
+}
+
+/*#endregion*/
+
+/*#region jumbotron*/
+
+.jumbotron-h2 {
+    padding-left: 10px;
+    padding: 5px 1px 15px 15px;
+    top: 100px;
+    margin-top: 10px;
+}
+
+.jumbotron-title {
+    min-height: 30px;
+    border-radius: 6px;
+    padding-top: 3px;
+    color: inherit;
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+}
+
+.jumbotron-label {
+    padding-top: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    .container .jumbotron-h2 {
+        padding-left: 15px;
+        top: 100px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .col-sm-1 {
+        width: 9%;
+    }
+
+    .col-sm-3 {
+        width: 24%;
+    }
+}
+
+@media all and (max-width:767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus
+    {
+        color: #999;
+        background-color:transparent;
+    }
+}
+
+
+/*#endregion*/
+
+/*#region form*/
+
+.errorStyle {
+    background-color: rgb(245, 78, 86);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+    margin-top: 2px;
+    filter: alpha(opacity=75); 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.form-horizontal .button-label {
+    padding-top: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-horizontal .form-group-min {
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.form-group-min label {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.form-control-min {
+    margin-bottom: 2px;
+    height: 30px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.form-control {
+    font-size: 13px;
+}
+
+/*#endregion*/
+
+address {
+    margin: 15px;
+}
+
+    address strong {
+        padding: 1px 1px 1px 1px;
+    }
+
+.selected {
+    background-color: #db137e;
+}
+
+thead tr {
+    border: 1px solid black;
+    background: lightgray;
+}
+
+tbody tr {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.myLeftButton {
+    background: url('../Images/left-arrow (1).png') no-repeat center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+.myEditButton {
+    background: url('../Images/edit-document.png') no-repeat center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+}
+
+.myPrinterButton {
+    background: url('../Images/printer.png') no-repeat center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.myRefreshButton {
+    background: url('../Images/refresh.png') no-repeat center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+}
+
+
+.btn-submit {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.btn-clear {
+    margin-top: 10px;
+}
+
+.circle:active {
+    border-radius: 50%;
+}
+
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.validationMessage {
+    color: #f00;
+}
+
+.customMessage {
+    color: #FFA500;
+}
+
+/*-----------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+.row {
+    margin-bottom: 5px;
+}
+
+.well {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #efefef;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1, h3, h4 {
+    background-color: rgba(245, 245, 245, 1);
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+p {
+    margin: 0 0 0px;
+}
+
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+#Questions, #ResultQuestions {
+    min-height: 150px;
+    border: 1px solid #000;
+    border-color: lightgrey;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+    #Questions .form-group {
+        margin-bottom: 0px;
+    }
+
+    #Questions .control-label {
+        padding-top: 2px;
+    }
+
+#LabelCountDown {
+    display: inline-block;
+}
+
+#TextCountDown {
+    display: inline;
+}
+
+#InputQuestion {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#LabelQuestion {
+    display: inline;
+    margin-left: 15px;
+}
+
+.ajaxLoader {
+    background: url('../Images/ajaxLoader.gif') no-repeat center;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -50px;
+}
+
+#AdmissionDate {
+    background-color: #ffffff;
+}
+
+#AdmissionDate[disabled] {
+    background-color: #eeeeee;
+}
+
+tfoot .clear:before {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    content: "\e020";
+}
+
+#Required
+{
+    font-style:italic;
+    margin-bottom: 0px;
+    font-weight: normal;
+    margin-top: -15px;
+    margin-right: -10px;
+}
+
+

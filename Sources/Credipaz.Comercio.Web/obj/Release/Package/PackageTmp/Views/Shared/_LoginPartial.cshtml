@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-left">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> @Resources.Language.MyCredits <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink(@Resources.Language.MyCreditsDetail, "Credits", "Home", routeValues: new { area = "" }, htmlAttributes: new { id = "detailRegisterLink" })</li>
+                <li>@Html.ActionLink(@Resources.Language.NewCredit, "NewCredit", "Home", routeValues: new { area = "" }, htmlAttributes: new { id = "newRegisterLink" })</li>
+            </ul>
+        </li>
+        <li>@Html.ActionLink(@Resources.Language.MyInfo, "Info", "Home", routeValues: new { area = "" }, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+
+    using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a>@Resources.Language.Welcome  ●  @Session["description"].ToString()</a>
+        </li>
+        <li><a href="javascript:sessionStorage.removeItem('accessToken');$('#logoutForm').submit();">@Resources.Language.LogOff</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink(@Resources.Language.Register, "Register", "Account", routeValues: new { area = "" }, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(@Resources.Language.LogIn, "Login", "Account", routeValues: new { area = "" }, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

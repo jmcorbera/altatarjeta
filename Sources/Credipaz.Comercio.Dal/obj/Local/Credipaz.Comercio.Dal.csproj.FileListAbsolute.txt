@@ -1,0 +1,8 @@
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Local\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Local\Credipaz.Comercio.Dal.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Local\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Local\Credipaz.Library.Log.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Local\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Local\Credipaz.Comercio.Dal.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Local\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Local\Credipaz.Comercio.Dal.pdb

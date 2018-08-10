@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.16.10.221:8080/CommonService/CommonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Credipaz.Common.Shared.Models" />
+  <xs:element name="GetTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterParams" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Credipaz.Common.Shared.Models" minOccurs="0" name="GetTypesResult" nillable="true" type="q1:ArrayOfGenericObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaCodes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Credipaz.Common.Shared.Models" minOccurs="0" name="GetAreaCodesResult" nillable="true" type="q2:ArrayOfTelObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

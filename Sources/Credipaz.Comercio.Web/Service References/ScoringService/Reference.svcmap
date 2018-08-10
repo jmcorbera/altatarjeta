@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca63268c-4664-457d-9ee4-23119b896192" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.16.10.77:8080/Scoring/Servicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="89a7ed04-8e65-4521-8560-2843fe02b885" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="Servicio.disco" MetadataType="Disco" ID="b1e61e59-b96b-4c21-985e-9b9fbe535726" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?disco" />
+    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="23c35957-9fed-43d6-8cb7-b9121d725b70" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?wsdl" />
+    <MetadataFile FileName="Servicio1.xsd" MetadataType="Schema" ID="536df794-6bbb-483f-aa94-de0bf304a2d1" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?xsd=xsd3" />
+    <MetadataFile FileName="Servicio2.xsd" MetadataType="Schema" ID="cb307329-d576-4635-acd2-0b196c678424" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?xsd=xsd1" />
+    <MetadataFile FileName="Servicio3.xsd" MetadataType="Schema" ID="c7beac1a-38f4-4b92-b510-e194d77baaae" SourceId="1" SourceUrl="http://172.16.10.77:8080/Scoring/Servicio.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

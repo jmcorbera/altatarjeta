@@ -1,0 +1,105 @@
+﻿<form id="Form" class="form-horizontal" data-bind="submit: SubmitIdentity, enterkey: SubmitIdentity">
+
+    <h4> @Resources.Language.Identification </h4>
+
+    <div class="form-group form-group-min">
+
+        <div id="Identification">
+
+            <label for="DataCuil" class="col-sm-1 control-label"> @Resources.Language.CUIL </label>
+            <div class="col-sm-2">
+                <input type="text" readonly="readonly" class="form-control" name="DataCuil" id="DataCuil" data-bind="value: dataCuil">
+            </div>
+
+            <label for="DataName" class="col-sm-2 control-label"> @Resources.Language.Name </label>
+            <div class="col-sm-3">
+                <input type="text" disabled="disabled" class="form-control" name="DataName" id="DataName" data-bind="value: dataName">
+            </div>
+        </div>
+    </div>
+
+    <h4> @Resources.Language.Validation </h4>
+
+    <div id="Questions" data-bind="visible : enableViewQuestions()">
+
+        <div class="form-group form-group-min">
+
+            <div class="col-sm-10">
+                <label class="control-label" data-bind="text: currentQuestion().Name()"></label>
+            </div>
+
+            <div class="col-sm-2">
+                <p id="TextCountDown" class="control-label" data-bind="visible: enableViewCountDown"> @Resources.Language.ResponseTime </p>
+                <label id="Labelcountdown" class="control-label" data-bind="style: { color: timerCountDown() < 10 ? 'red' : 'black' }, text: timerCountDown, visible: enableViewCountDown"> </label>
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <hr class="hr">
+        </div>
+
+        <div class="form-group form-group-min" data-bind="foreach: currentQuestion().Answers()">
+            <div>
+                <input id="InputQuestion" type="radio" data-bind="checked: $parent.itemChecked, value: Id ">
+                <label id="LabelQuestion" data-bind="text: Name"></label>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="ResultQuestions" class="form-group" data-bind="visible : enableViewResultQuestions(), style: { borderColor: saveQuestionsModel().Result() == '@Resources.Language.Correct' ? 'Green' : 'Red' }">
+
+        <div class=" col-sm-12 ">
+            <label class=" control-label"> @Resources.Language.ValidationResult </label>
+        </div>
+
+        <hr class="hr">
+
+        <div class="form-group form-group-min">
+            <label for="Result" class="col-sm-2 control-label"> @Resources.Language.Result </label>
+            <div class="col-sm-2">
+                <input type="text" name="Result" id="Result" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().Result() , style: { color: saveQuestionsModel().Result() == '@Resources.Language.Correct' ? 'Green' : 'Red'}">
+            </div>
+
+            <label for="CodeResult" class="col-sm-2 control-label"> @Resources.Language.CodeResult </label>
+            <div class="col-sm-2">
+                <input type="text" name="CodeResult" id="CodeResult" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().ReferenceCode">
+            </div>
+
+            <label for="Quests" class="col-sm-2 control-label"> @Resources.Language.Quests </label>
+            <div class="col-sm-2">
+                <input type="text" name="Quests" id="Quests" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().Questions">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+
+            <label for="CorrectQuestions" class="col-sm-2 control-label"> @Resources.Language.CorrectQuestions </label>
+            <div class="col-sm-2">
+                <input type="text" name="CorrectQuestions" id="CorrectQuestions" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().CorrectQuestions">
+            </div>
+
+            <label for="PercentageRequired" class="col-sm-2 control-label"> @Resources.Language.PercentageRequired </label>
+            <div class="col-sm-2">
+                <input type="text" name="PercentageRequired" id="PercentageRequired" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().HitsPercentage">
+            </div>
+
+            <label for="PercentageAcquired" class="col-sm-2 control-label"> @Resources.Language.PercentageAcquired </label>
+            <div class="col-sm-2">
+                <input type="text" name="PercentageAcquired" id="PercentageAcquired" disabled="disabled" class="form-control" data-bind="value: saveQuestionsModel().HitsPercentageAcquired">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="ConfirmButton" data-bind="visible: enableViewConfirmButton()">
+        <button type="submit" class="btn btn-primary pull-right btn-submit"> @Resources.Language.Confirm </button>
+        <button data-bind="click: CancelCommand" class="btn btn-primary pull-right btn-clear"> @Resources.Language.Cancel </button>
+    </div>
+
+    <div id="QuestionButton" data-bind="visible: enableViewQuestionButton()">
+        <button type="submit" class="btn btn-primary pull-right btn-submit"> @Resources.Language.Next </button>
+        <button data-bind="click: CancelCommand" class="btn btn-primary pull-right btn-clear"> @Resources.Language.Cancel </button>
+    </div>
+
+</form>

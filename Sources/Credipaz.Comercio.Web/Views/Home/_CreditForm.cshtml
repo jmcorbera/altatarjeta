@@ -1,0 +1,402 @@
+﻿
+
+<form id="Form" class="form-horizontal" data-bind="submit: Submit, enterkey: Submit">
+
+    <h4> @Resources.Language.RequestData </h4>
+
+    <div class="form-group form-group-min">
+        <label for="Subsidiary" class="col-sm-1 control-label navbar-left"> @Resources.Language.Subsidiary </label>
+        <div class="col-sm-3">
+            <input type="text" name="Subsidiary" id="Subsidiary" class="form-control form-control-min" disabled data-bind="value: creditDetail().Subsidiary" placeholder=@Resources.Language.Subsidiary>
+        </div>
+
+        <label for="SelectSeller" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Seller </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectSeller"
+                    name="SelectSeller"
+                    data-bind="options: sellersList, optionsCaption: '@Resources.Language.SelectSeller', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdSeller, enable : fieldStatus['seller']()"></select>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="amount" class="col-sm-1 control-label navbar-left"> @Resources.Language.Amount </label>
+        <div class="col-sm-3">
+            <input type="number" class="form-control form-control-min" name="amount" id="amount" disabled data-bind="value: creditDetail().Amount">
+        </div>
+
+        <label for="SelectPlans" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Plans </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectPlans"
+                    name="SelectPlans"
+                    data-bind="options: plansList, optionsCaption: '@Resources.Language.Plans', optionsValue : 'Id', optionsText: 'Description', value: currentPlan, enable : fieldStatus['plan']()"></select>
+        </div>
+
+        <label for="SelectQuotas" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Quotas </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectQuotas"
+                    name="SelectQuotas"
+                    data-bind="options: quotasPlanList, optionsCaption: '@Resources.Language.Quotas', optionsValue : 'Id', optionsText: 'Description', value: currentQuota, enable : fieldStatus['quota']()"></select>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="TaxQuotes" class="col-sm-1 control-label navbar-left"> @Resources.Language.TaxQuotes </label>
+        <div class="col-sm-3">
+            <input type="number" name="TaxQuotes" id="TaxQuotes" class="form-control form-control-min" disabled data-bind="value: creditDetail().TaxQuota">
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <hr class="hr">
+    </div>
+
+    <h4> @Resources.Language.PersonalData </h4>
+
+    <div class="form-group form-group-min">
+
+        <label for="Name" class="col-sm-1 control-label navbar-left"> @Resources.Language.Name </label>
+        <div class="col-sm-3">
+            <input type="text" name="Name" id="Name" class="form-control form-control-min" disabled data-bind="value: creditDetail().Name">
+        </div>
+
+        <label for="DNI" class="col-sm-1 control-label"> @Resources.Language.DNI </label>
+        <div class="col-sm-3">
+            <input type="number" name="DNI" id="DNI" class="form-control form-control-min" disabled data-bind="value: creditDetail().DNI">
+        </div>
+
+        <label for="Sex" class="col-sm-1 control-label"> @Resources.Language.Sex </label>
+        <div class="col-sm-3">
+            <input type="text" name="Sex" id="Sex" class="form-control form-control-min" disabled data-bind="value: creditDetail().Sex">
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="SelectMaritalStatus" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.MaritalStatus </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectMaritalStatus"
+                    name="SelectMaritalStatus"
+                    data-bind="options: maritalStatusList, optionsCaption: '@Resources.Language.MaritalStatus', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdMaritalStatus, enable : fieldStatus['maritalStatus']()"></select>
+        </div>
+
+        <label for="SelectNationality" class="col-sm-1 control-label navbar-left"><a class="control-label" data-bind="visible: enableViewSendButton()"> * </a>  @Resources.Language.Nationality </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectNationality"
+                    name="SelectNationality"
+                    data-bind="options: nationalityList, optionsCaption: '@Resources.Language.Nationality', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdNationality, enable : fieldStatus['nationality']()"></select>
+        </div>
+
+        <label for="BirthDate" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.BirthDate </label>
+        <div class="datepicker-req">
+            <div class="col-sm-3 input-group date" data-bind="datepicker: creditDetail().BirthDate">
+                <input type="text" class="form-control form-control-min" name="BirthDate" id="BirthDate" data-bind="enable : fieldStatus['BirthDate']()" placeholder=@Resources.Language.BirthDate>
+                <div class="input-group-addon btn btn-min">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min" data-bind="visible: enableViewSendButton()">
+        <label for="Places" class="col-sm-1 control-label"> @Resources.Language.GeoLocation </label>
+        <div class="col-sm-6 input-group">
+            <input type="text" class="form-control form-control-min" id="Places" name="Places" data-bind="addressAutocomplete: FullAddress, route: creditDetail().Address, street_number: creditDetail().AddressNumber, postal_code: creditDetail().PostalCode, locality: creditDetail().Location, administrative_area_level_1: creditDetail().Province, lat: Lat, lon: Lon" />
+            @*<div class="input-group-addon btn" data-bind="click: ViewMap">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </div>*@
+            <div class="input-group-addon btn-min">
+                <span class="glyphicon glyphicon-globe"></span>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="form-group form-group-min" data-bind="visible: enableViewMap()">
+            <label class="col-sm-1 control-label"></label>
+            <div class="col-sm-3">
+                <div id="map_canvas" style="margin-left:10px; width:530px; height:300px"></div>
+            </div>
+        </div>*@
+
+    <div class="form-group form-group-min">
+        <label for="Address" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Address </label>
+        <div class="col-sm-3">
+            <input type="text" name="Address" id="Address" class="form-control form-control-min" disabled data-bind="value: creditDetail().Address">
+        </div>
+
+        <label for="CodeResult" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Number </label>
+        <div class="col-sm-3">
+            <input type="number" name="CodeResult" id="CodeResult" class="form-control form-control-min" disabled data-bind="value: creditDetail().AddressNumber">
+        </div>
+
+        <label for="PostalCode" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.PostalCode </label>
+        <div class="col-sm-3">
+            <input type="text" name="PostalCode" id="PostalCode" class="form-control form-control-min" disabled data-bind="value: creditDetail().PostalCode">
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="SelectLocation" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Location </label>
+        <div class="col-sm-3">
+            <input type="text" name="SelectLocation" id="SelectLocation" class="form-control form-control-min" disabled data-bind="value: creditDetail().Location">
+        </div>
+
+        <label for="SelectProvince" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Province </label>
+        <div class="col-sm-3">
+            <input type="text" name="SelectProvince" id="SelectProvince" class="form-control form-control-min" disabled data-bind="value: creditDetail().Province">
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="SelectHousing" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Housing </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectHousing"
+                    name="SelectHousing"
+                    data-bind="options: housingList, optionsCaption: '@Resources.Language.Housing', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdHousing, enable : fieldStatus['housing']()"></select>
+        </div>
+
+        <label for="Email" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Email </label>
+        <div class="col-sm-3">
+            <input type="email" name="Email" id="Email" class="form-control form-control-min" data-bind="value: creditDetail().Email, enable : fieldStatus['Email']()">
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="TelRef" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Tel </label>
+
+        <div class="col-sm-3">
+            <div class="tel-req">
+                <input type="number" id="Tel1AreaCode" name="Tel1AreaCode" class="form-control form-control-min pull-left" style="width: 30%"
+                       data-bind="autoComplete: { selected: creditDetail().AreaCode1, options: areaCodeList }, hasFocus: creditDetail().Tel1IsSelected, enable : fieldStatus['AreaCode1']()"
+                       placeholder=@Resources.Language.Prefix>
+                <span class="pull-left" style="width: 5%; padding-top: 5px; text-align:center;"> - </span>
+                <input type="number" id="TelNumber1" name="TelNumber1" class="form-control form-control-min" style="width: 65%" data-bind="value: creditDetail().Tel1, enable : creditDetail().EnableTel1Input" placeholder=@Resources.Language.TelNumber>
+            </div>
+        </div>
+
+        <label for="SelectTypeTel" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Type </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelType1"
+                    name="SelectTelType1"
+                    data-bind="options: telTypeList, optionsCaption: '@Resources.Language.Type', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelType1, enable : fieldStatus['telType1']()"></select>
+        </div>
+
+        <label for="SelectRel" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Relation </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelRel1"
+                    name="SelectTelRel1"
+                    data-bind="options: telRelList, optionsCaption: '@Resources.Language.Relation', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelRel1, enable : fieldStatus['telRel1']()"></select>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="TelRef2" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Tel2 </label>
+
+        <div class="col-sm-3">
+            <div class="tel-req">
+                <input type="number" id="Tel2AreaCode" name="Tel2AreaCode" class="form-control form-control-min pull-left" style="width: 30%"
+                       data-bind="autoComplete: { selected: creditDetail().AreaCode2, options: areaCodeList }, hasFocus: creditDetail().Tel2IsSelected, enable : fieldStatus['AreaCode2']()"
+                       placeholder=@Resources.Language.Prefix>
+                <span class="pull-left" style="width: 5%; padding-top: 5px; text-align:center;"> - </span>
+                <input type="number" id="TelNumber2" name="TelNumber2" class="form-control form-control-min" style="width: 65%" data-bind="value: creditDetail().Tel2, enable : creditDetail().EnableTel2Input" placeholder=@Resources.Language.TelNumber>
+            </div>
+        </div>
+
+        <label for="SelectTipoTel2" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Type </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelType2"
+                    name="SelectTelType2"
+                    data-bind="options: telTypeList, optionsCaption: '@Resources.Language.Type', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelType2, enable : fieldStatus['telType2']()"></select>
+        </div>
+
+        <label for="SelectRel2" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Relation </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelRel2"
+                    name="SelectTelRel2"
+                    data-bind="options: telRelList, optionsCaption: '@Resources.Language.Relation', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelRel2, enable : fieldStatus['telRel2']()"></select>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="TelRef3" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Tel3 </label>
+
+        <div class="col-sm-3">
+            <div class="tel-req">
+                <input type="number" id="Tel3AreaCode" name="Tel3AreaCode" class="form-control form-control-min pull-left" style="width: 30%"
+                       data-bind="autoComplete: { selected: creditDetail().AreaCode3, options: areaCodeList }, hasFocus: creditDetail().Tel3IsSelected, enable : fieldStatus['AreaCode3']()"
+                       placeholder=@Resources.Language.Prefix>
+                <span class="pull-left" style="width: 5%; padding-top: 5px; text-align:center;"> - </span>
+                <input type="number" id="TelNumber3" name="TelNumber3" class="form-control form-control-min" style="width: 65%" data-bind="value: creditDetail().Tel3, enable : creditDetail().EnableTel3Input" placeholder=@Resources.Language.TelNumber>
+            </div>
+        </div>
+
+        <label for="SelectTipoTel" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Type </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelType3"
+                    name="SelectTelType3"
+                    data-bind="options: telTypeList, optionsCaption: '@Resources.Language.Type', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelType3, enable : fieldStatus['telType3']()"></select>
+        </div>
+
+        <label for="SelectRel3" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Relation </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectTelRel3"
+                    name="SelectTelRel3"
+                    data-bind="options: telRelList, optionsCaption: '@Resources.Language.Relation', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdTelRel3, enable : fieldStatus['telRel3']()"></select>
+        </div>
+    </div>
+
+    <div class="form-group form-group-min">
+        <hr class="hr">
+    </div>
+
+    <h4> @Resources.Language.LaboralData </h4>
+
+    <div class="form-group form-group-min">
+        <label for="SelectOcup" class="col-sm-1 control-label navbar-left"> @Resources.Language.Ocupation </label>
+        <div class="col-sm-3">
+            <select class="form-control form-control-min"
+                    id="SelectOcupation"
+                    name="SelectOcupation"
+                    disabled="disabled"
+                    data-bind="options: ocupationList, optionsCaption: '@Resources.Language.Ocupation', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().IdOcupation"></select>
+        </div>
+    </div>
+
+    <div data-bind="visible: enableLaboralData">
+        <div class="form-group form-group-min">
+            <label for="Company" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Company </label>
+            <div class="col-sm-3">
+                <input type="text" name="Company" id="Company" class="form-control form-control-min" data-bind="value: creditDetail().LaboralData().Company, enable : fieldStatus['Company']()">
+            </div>
+
+            <label for="CUIT" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.CUIT </label>
+            <div class="col-sm-3">
+                <input type="number" name="CUIT" id="CUIT" class="form-control form-control-min" data-bind="value: creditDetail().LaboralData().CUIT, enable : fieldStatus['CUIT']()">
+            </div>
+
+
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="SelectjobField" class="col-sm-1 control-label navbar-left"> @Resources.Language.JobField </label>
+            <div class="col-sm-3">
+                <select class="form-control form-control-min"
+                        id="SelectjobField"
+                        name="SelectjobField"
+                        data-bind="options: jobFieldList, optionsCaption: '@Resources.Language.JobField', optionsValue : 'Id', optionsText: 'Description', value: creditDetail().LaboralData().IdJobField, enable : fieldStatus['JobField']()"></select>
+            </div>
+
+            <label for="WorkFile" class="col-sm-1 control-label"> @Resources.Language.WorkFile </label>
+            <div class="col-sm-3">
+                <input type="text" name="WorkFile" id="WorkFile" class="form-control form-control-min" data-bind="value: creditDetail().LaboralData().WorkFile, enable : fieldStatus['WorkFile']()">
+            </div>
+
+            <label for="AdmissionDate" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.AdmissionDate </label>
+            <div class="datepicker-req">
+                <div class="col-sm-3 input-group date" data-bind="datepicker: creditDetail().LaboralData().AdmissionDate">
+                    <input type="text" class="form-control form-control-min" name="AdmissionDate" id="AdmissionDate2" data-bind="enable : fieldStatus['AdmissionDate']()" placeholder=@Resources.Language.AdmissionDate>
+                    <div class="input-group-addon btn btn-min">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="MontlyIncome" class="col-sm-1 control-label"> @Resources.Language.MontlyIncome </label>
+            <div class="col-sm-3">
+                <input type="number" name="MontlyIncome" id="MontlyIncome" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().MontlyIncome">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="WorkingTel" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.WorkingTel </label>
+
+            <div class="col-sm-3">
+                <div class="tel-req">
+                    <input type="number" id="WorkAreaCode" name="WorkAreaCode" class="form-control form-control-min pull-left" style="width: 30%"
+                           data-bind="autoComplete: { selected: creditDetail().LaboralData().WorkAreaCode, options: areaCodeList }, hasFocus: creditDetail().LaboralData().WorkTelIsSelected, enable : fieldStatus['WorkAreaCode']()"
+                           placeholder=@Resources.Language.Prefix>
+                    <span class="pull-left" style="width: 5%; padding-top: 5px; text-align:center;"> - </span>
+                    <input type="number" id="WorkTelNumber" name="WorkTelNumber" class="form-control form-control-min" style="width: 65%" data-bind="value: creditDetail().LaboralData().WorkingTel, enable : creditDetail().LaboralData().EnableWorkTelInput" placeholder=@Resources.Language.TelNumber>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group form-group-min" data-bind="visible: enableViewSendButton()">
+            <label for="WorkPlaces" class="col-sm-1 control-label"> @Resources.Language.GeoLocation  </label>
+            <div class="col-sm-6 input-group">
+                <input type="text" class="form-control form-control-min" id="Places" name="Places" data-bind="workaddressAutocomplete: WorkFullAddress, route: creditDetail().LaboralData().WorkAddress, street_number: creditDetail().LaboralData().WorkAddressNumber, postal_code: creditDetail().LaboralData().WorkPostalCode, locality: creditDetail().LaboralData().WorkLocation, administrative_area_level_1: creditDetail().LaboralData().WorkProvince, lat: WorkLat, lon: WorkLon" />
+                @*<div class="input-group-addon btn" data-bind="click: ViewWorkMap">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </div>*@
+                <div class="input-group-addon btn-min">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="form-group form-group-min" data-bind="visible: enableViewWorkMap()">
+                <label class="col-sm-1 control-label"></label>
+                <div class="col-sm-3">
+                    <div id="workmap_canvas" style="margin-left:10px; width:530px; height:300px"></div>
+                </div>
+            </div>*@
+
+        <div class="form-group form-group-min">
+            <label for="WorkAddress" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.WorkAddress </label>
+            <div class="col-sm-3">
+                <input type="text" name="WorkAddress" id="WorkAddress" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().WorkAddress">
+            </div>
+
+            <label for="WorkAddressNumber" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Number </label>
+            <div class="col-sm-3">
+                <input type="number" name="WorkAddressNumber" id="WorkAddressNumber" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().WorkAddressNumber">
+            </div>
+
+            <label for="WorkPostalCode" class="col-sm-1 control-label"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.PostalCode </label>
+            <div class="col-sm-3">
+                <input type="number" name="WorkPostalCode" id="WorkPostalCode" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().WorkPostalCode">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="WorkLocation" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Location </label>
+            <div class="col-sm-3">
+                <input type="text" name="WorkLocation" id="WorkLocation" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().WorkLocation">
+            </div>
+
+            <label for="WorkProvince" class="col-sm-1 control-label navbar-left"> <a class="control-label" data-bind="visible: enableViewSendButton()"> * </a> @Resources.Language.Province </label>
+            <div class="col-sm-3">
+                <input type="text" name="WorkProvince" id="WorkProvince" class="form-control form-control-min" disabled data-bind="value: creditDetail().LaboralData().WorkProvince">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group form-group-min">
+        <label for="Obs" class="col-sm-1 control-label navbar-left"> @Resources.Language.Observations </label>
+        <div class="col-sm-11">
+            <textarea name="Obs" id="Obs" class="form-control form-control-min" rows="3" data-bind="value: creditDetail().Obs, enable : fieldStatus['Obs']()"></textarea>
+        </div>
+    </div>
+
+    <div id="SendButton" data-bind="visible: enableViewSendButton()">
+        <button type="submit" class="btn btn-primary pull-right btn-submit"> @Resources.Language.Send </button>
+        <button data-bind="click: CancelCommand" class="btn btn-primary pull-right btn-clear"> @Resources.Language.Cancel </button>
+    </div>
+
+</form>
+
+
+

@@ -1,0 +1,107 @@
+﻿<div class="jumbotron jumbotron-h2">
+    <h2>@Resources.Language.MyCredits</h2>
+</div>
+
+<address>
+    <strong> @Session["description"].ToString() </strong> - <strong> @Resources.Language.Consuption </strong> <br>
+    <strong> @Resources.Language.CUIT : </strong> <strong> @Session["cuit"].ToString() </strong> <br>
+</address>
+
+<div class="table-responsive" data-bind="visible : $root.enableTable()">
+    <div class="form-group">
+        <div class="jumbotron-title col-sm-12">
+            <label class="jumbotron-label"> @Resources.Language.CreditsDetails</label>
+            <input width="500" type="button" id="refreshButton" class="myRefreshButton circle pull-right" data-bind="click: $root.Refresh" value="" data-toggle="tooltip" title="Actualizar">
+        </div>
+    </div>
+
+    <div id="creditsTable" style="display:none" data-bind="visible : $root.enableTable()">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>@Resources.Language.Date</th>
+                    <th>@Resources.Language.FullName</th>
+                    <th>@Resources.Language.DocType</th>
+                    <th>@Resources.Language.DocNumber</th>
+                    <th>@Resources.Language.Amount</th>
+                    <th>@Resources.Language.Quotas</th>
+                    <th>@Resources.Language.Status</th>
+                </tr>
+
+            </thead>
+            <tbody data-bind="foreach: credits()">
+                <tr data-bind="click: $root.selectRow">
+                    <td data-bind="visible: Status == 'PEN'"><img src="~/Images/naranja.jpg" /></td>
+                    <td data-bind="visible: Status == 'PCO'"><img src="~/Images/verde.jpg" /></td>
+                    <td data-bind="visible: Status == 'OK'"><img src="~/Images/gris.jpg" /></td>
+                    <td data-bind="visible: Status == 'REC'"><img src="~/Images/rojo.jpg" /></td>
+                    <td data-bind="text: Date"></td>
+                    <td data-bind="text: Name"></td>
+                    <td data-bind="text: DniType"></td>
+                    <td data-bind="text: DniNumber"></td>
+                    <td data-bind="text: Amount"></td>
+                    <td data-bind="text: Quotas"></td>
+                    <td data-bind="visible: Status == 'PEN', text: Status" data-toggle="tooltip" data-placement="top" title="Pendiente"></td>
+                    <td data-bind="visible: Status == 'PCO', text: Status" data-toggle="tooltip" data-placement="top" title="Pendiente Comercio"></td>
+                    <td data-bind="visible: Status == 'OK', text: Status" data-toggle="tooltip" data-placement="top" title="OK Generado"></td>
+                    <td data-bind="visible: Status == 'REC', text: Status" data-toggle="tooltip" data-placement="top" title="Rechazado"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="display:none" data-bind="with: IdentityValidatorVM, visible : $root.enableIdentity()">
+    <div class="form-group">
+        <div class="jumbotron-title col-sm-12">
+            <input type="button" id="backbutton" class="myLeftButton circle" data-bind="click: $root.Back" value="">
+            <label for="backButton"> @Resources.Language.ReturnCreditsDetails </label>
+        </div>
+    </div>
+
+    <h4> <strong> @Resources.Language.IdentityValidator </strong> </h4>
+
+    <div id="creditForm">
+        @Html.Partial("_IdentityValidation")
+    </div>
+
+    <div id="SendButton" data-bind="visible: $root.enableViewSendButton()">
+        <button data-bind="click: $root.GetFormCommand" class="btn btn-primary pull-right btn-submit"> @Resources.Language.Send A </button>
+        <button data-bind="click: $root.CancelCommand" class="btn btn-primary pull-right btn-clear"> @Resources.Language.Cancel A</button>
+    </div>
+
+</div>
+
+<div style="display:none" data-bind="with: CreditFormVM, visible : $root.enableDetailRow()">
+    <div class="jumbotron-title  col-sm-12">
+        <input type="button" id="backButton" class="myLeftButton circle" data-bind="click: $root.Back" value="">
+        <label for="backButton"> @Resources.Language.ReturnCreditsDetails </label>
+        <a class="myPrinterButton pull-right" href="#" onclick="window.open('PrintForm', 'popupwindow', 'width=800,height=700,left=200,top=5,scrollbars,toolbar=0,resizable').document.title = 'Formulario PDF'; return false;" data-bind="visible: $root.enablePrint()" data-toggle="tooltip" title="Imprimir"></a>
+    </div>
+
+    <h4> <strong> @Resources.Language.CreditForm </strong> </h4>
+
+    <div class="form-group" data-bind="visible : enableViewSendButton()">
+        <div class="col-sm-12">
+            <label id="Required" class="pull-right"> <a> @Resources.Language.RequiredData </a> </label>
+        </div>
+    </div>
+
+    <div id="creditForm">
+        @Html.Partial("_CreditForm")
+    </div>
+
+</div>
+
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/knockout")
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgRva0lj-7BI3yC1tlgAZZ52_bdP7trDQ&libraries=places"></script>
+
+    <script type="text/javascript" src="~/Scripts/ViewModels/IdentityValidatorViewModel.js"></script>
+    <script type="text/javascript" src="~/Scripts/ViewModels/CreditFormViewModel.js"></script>
+    <script type="text/javascript" src="~/Scripts/ViewModels/CreditViewModel.js"></script>
+}

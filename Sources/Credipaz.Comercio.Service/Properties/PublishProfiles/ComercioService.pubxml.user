@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\172.16.10.77\Servicios\ComercioService</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Credipaz.Comercio.Dal.dll">
+      <publishTime>09/21/2017 16:50:16</publishTime>
+    </File>
+    <File Include="bin/Credipaz.Comercio.Service.dll">
+      <publishTime>01/16/2018 12:27:27</publishTime>
+    </File>
+    <File Include="bin/Credipaz.Comercio.Shared.dll">
+      <publishTime>09/21/2017 16:50:16</publishTime>
+    </File>
+    <File Include="bin/Credipaz.Library.Log.dll">
+      <publishTime>04/18/2016 12:14:46</publishTime>
+    </File>
+    <File Include="ComercioService.svc">
+      <publishTime>01/06/2017 12:08:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/16/2018 12:27:40</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,56 @@
+﻿@using Credipaz.Comercio.Web.Models
+
+@model LoginViewModel
+@{
+    ViewBag.Title = Resources.Language.LogIn + ".";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <div class="form-group">
+        <div class="jumbotron-title col-sm-12">
+            <label class="jumbotron-label"> @Resources.Language.UseLocalAccount</label>
+        </div>
+    </div>
+
+    <form id="__AjaxAntiForgeryForm" class="form-horizontal" data-bind="submit: SubmitLogin, enterkey: SubmitLogin">
+
+        @Html.AntiForgeryToken()
+
+        <div class="form-group form-group-min">
+            <label for="IdUser" class="col-sm-2 control-label navbar-left"> @Resources.Language.IdUser </label>
+            <div class="col-sm-3">
+                <input type="text" name="IdUser" id="IdUser" class="form-control form-control-min" data-bind="value: idUser">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="Password" class="col-sm-2 control-label navbar-left"> @Resources.Language.Password </label>
+            <div class="col-sm-3">
+                <input type="password" name="Password" id="Password" class="form-control form-control-min" data-bind="value: password">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-4">
+                <div class="g-recaptcha" data-sitekey="6LcIGCAUAAAAAFQHzDyoUT7fsYBVsFI5PyU-kI61"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value=@Resources.Language.LogIn class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="~/Scripts/ViewModels/LoginViewModel.js"></script>
+}

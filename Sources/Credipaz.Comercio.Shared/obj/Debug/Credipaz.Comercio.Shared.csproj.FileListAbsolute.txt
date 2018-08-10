@@ -1,0 +1,8 @@
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Shared\bin\Debug\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Shared\bin\Debug\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Shared\obj\Debug\Credipaz.Comercio.Shared.pdb

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5e011f8f-d2fa-4547-ad77-3a8953e22d9f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.16.10.221:8080/CommonService/CommonService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommonService1.disco" MetadataType="Disco" ID="fde80452-c315-40ef-b55f-6cfea6857148" SourceId="1" SourceUrl="http://172.16.10.221:8080/CommonService/CommonService.svc?disco" />
+    <MetadataFile FileName="CommonService3.xsd" MetadataType="Schema" ID="999c95c9-e454-41d6-8c48-48324e0ccc9c" SourceId="1" SourceUrl="http://172.16.10.221:8080/CommonService/CommonService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommonService1.wsdl" MetadataType="Wsdl" ID="e01117e0-5008-404c-9c68-ea2f2948fa11" SourceId="1" SourceUrl="http://172.16.10.221:8080/CommonService/CommonService.svc?wsdl" />
+    <MetadataFile FileName="CommonService31.xsd" MetadataType="Schema" ID="53af8be6-cc2b-43f7-a3e4-33f01d55beb5" SourceId="1" SourceUrl="http://172.16.10.221:8080/CommonService/CommonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommonService32.xsd" MetadataType="Schema" ID="bdb23b9b-325e-4e84-b673-21ed526c29b0" SourceId="1" SourceUrl="http://172.16.10.221:8080/CommonService/CommonService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

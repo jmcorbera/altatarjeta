@@ -1,0 +1,16 @@
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Dal.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Library.Log.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.pdb
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Dal.pdb
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Library.Log.dll
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\bin\Debug\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\AltaTarjeta\Sources\Credipaz.Comercio.Dal\obj\Debug\Credipaz.Comercio.Dal.pdb

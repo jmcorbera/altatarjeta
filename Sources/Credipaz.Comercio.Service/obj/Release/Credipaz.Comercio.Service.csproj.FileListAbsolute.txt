@@ -1,0 +1,11 @@
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Service.dll.config
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Service.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Service.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Dal.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Shared.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Library.Log.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Dal.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\bin\Credipaz.Comercio.Shared.pdb
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\obj\Release\Credipaz.Comercio.Service.csprojResolveAssemblyReference.cache
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\obj\Release\Credipaz.Comercio.Service.dll
+C:\Users\jcorbera\Documents\Sources\WebComercio\Sources\Credipaz.Comercio.Service\obj\Release\Credipaz.Comercio.Service.pdb

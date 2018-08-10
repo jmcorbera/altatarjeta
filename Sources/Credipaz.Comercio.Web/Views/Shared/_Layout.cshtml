@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Credipaz Web de Comercio</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top example6">
+        @RenderPage("_Header.cshtml")
+    </div>
+
+    <div id="content" class="container body-content">
+        @RenderBody()
+    </div>
+
+    <hr />
+    <footer>
+        <div class="container">
+            @RenderPage("_Footer.cshtml")
+        </div>
+    </footer>
+
+    <!-- Ajax Gif  -->
+    <div class="modal fade" id="ajaxLoaderModal" data-backdrop="static">
+        <div class="modal-dialog-sm" id="loading">
+            <p>@Resources.Language.Sending</p> 
+            <img src="~/Images/ajax-loader%20(1).gif" />
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title custom-header" style="background: #db137e">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        @Resources.Language.Error
+                    </h4>
+                </div>
+                <div class="modal-body" id="error-modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-default accept" data-dismiss="modal" aria-hidden="true">@Resources.Language.OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal fade" data-backdrop="static" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title custom-header" style="background: #db137e">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        @Resources.Language.Information
+                    </h4>
+                </div>
+                <div class="modal-body" id="info-modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-default accept" data-dismiss="modal" aria-hidden="true">@Resources.Language.Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal fade" data-backdrop="static" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title custom-header" style="background: #db137e">
+                        <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                        @Resources.Language.Confirm
+                    </h4>
+                </div>
+                <div class="modal-body" id="confirm-modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-default accept" data-dismiss="modal" aria-hidden="true">@Resources.Language.Accept</button>
+                    <button class="btn btn-default cancel" data-dismiss="modal" aria-hidden="true">@Resources.Language.Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        $(function () {
+
+            setLanguageResources();
+
+            UrlAction = function (controller, action) {
+                var url = '@Url.Action("action", "controller")';
+
+                url = url.replace("controller", controller).replace("action", action);
+
+                return url;
+            }
+
+            function setLanguageResources() {
+                window.messages = {
+                    "ValidationRejected": "@Resources.Language.ValidationRejected",
+                    "ValidationExist": "@Resources.Language.ValidationExist",
+                    "Correct": "@Resources.Language.Correct",
+                    "Incorrect": "@Resources.Language.Incorrect",
+                    "A": "@Resources.Language.A",
+                    "R": "@Resources.Language.R",
+                    "Male": "@Resources.Language.Male",
+                    "Female": "@Resources.Language.Female",
+                    "SessionExpired": "@Resources.Language.SessionExpired",
+                    "FormSaved": "@Resources.Language.FormSaved",
+                    "FormSavedPending": "@Resources.Language.FormSavedPending",
+                    "CheckData": "@Resources.Language.CheckData",
+                    "PreAuthorizedCredit": "@Resources.Language.PreAuthorizedCredit",
+                    "PreAuthorizedCreditAnulled": "@Resources.Language.PreAuthorizedCreditAnulled",
+                    "Annulled": "@Resources.Language.Annulled",
+                    "RejectPreAuthorized": "@Resources.Language.RejectPreAuthorized",
+                    "CommercePreAuthorized": "@Resources.Language.CommercePreAuthorized",
+                    "PendingPreAuthorized": "@Resources.Language.PendingPreAuthorized",
+                    "OKPreAuthorized": "@Resources.Language.OKPreAuthorized",
+                    "MessageMinLength": "@Resources.Language.MessageMinLength",
+                    "MessageMaxLength": "@Resources.Language.MessageMaxLength",
+                    "MessageRequired": "@Resources.Language.MessageRequired",
+                    "MessageMail": "@Resources.Language.MessageMail",
+                    "MessageNumber": "@Resources.Language.MessageNumber",
+                    "MinAgeCredit": "@Resources.Language.MinAgeCredit",
+                    "MaxAgeCredit": "@Resources.Language.MaxAgeCredit",
+                    "WorkSeniority": "@Resources.Language.WorkSeniority",
+                    "telNumberLong": "@Resources.Language.telNumberLong",
+
+                };
+            }
+        });
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

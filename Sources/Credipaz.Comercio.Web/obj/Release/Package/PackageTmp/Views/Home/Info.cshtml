@@ -1,0 +1,17 @@
+﻿<div class="jumbotron jumbotron-h2">
+    <h2>@Resources.Language.MyInfo</h2>
+</div>
+
+<address>
+    <strong>@Session["description"].ToString()</strong> - <strong>@Resources.Language.Consuption </strong><br>
+    <strong>@Resources.Language.CUIT : </strong><strong> @Session["cuit"].ToString() </strong><br>
+    <strong>@Session["address"].ToString()</strong><br>
+    <strong>@Session["location"].ToString()</strong> - <strong> @Session["province"].ToString() </strong><br>
+
+</address>
+
+<div>
+    <img src="~/Images/tarjeta-comodin.jpg" class="img-responsive">
+</div>
+
+

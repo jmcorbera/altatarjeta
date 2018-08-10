@@ -1,0 +1,131 @@
+﻿<div class="jumbotron jumbotron-h2">
+    <h2>@Resources.Language.MyCredits</h2>
+</div>
+
+<address>
+    <strong>@Session["description"].ToString()</strong> - <strong>@Resources.Language.Consuption </strong><br>
+    <strong>@Resources.Language.CUIT : </strong><strong> @Session["cuit"].ToString() </strong><br>
+</address>
+
+
+
+<div data-bind="visible : $root.enableRegister()">
+    <div class="form-group">
+        <div class="jumbotron-title col-sm-12">
+            <label class="jumbotron-label"> @Resources.Language.CreditIncrease</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label id="Required" class="pull-right"> <a> @Resources.Language.RequiredData </a> </label>
+        </div>
+    </div>
+
+    <form id="Form" class="form-horizontal" data-bind="submit: SubmitRegister, enterkey: SubmitRegister">
+
+        <div class="form-group form-group-min">
+            <label for="SelectDocument" class="col-sm-2 control-label navbar-left"> <a class="control-label"> * </a> @Resources.Language.Document </label>
+            <div class="col-sm-3">
+                <input type="number" name="Document" id="Document" class="form-control form-control-min" data-bind="value: docNumber">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="SelectSex" class="col-sm-2 control-label navbar-left"> <a class="control-label"> * </a>  @Resources.Language.Sex </label>
+            <div class="col-sm-3">
+                <select class="form-control form-control-min"
+                        id="SelectSex"
+                        name="SelectSex"
+                        data-bind="options: $root.sexList, optionsCaption: '@Resources.Language.SelectSex', optionsValue : 'Id', optionsText: 'Description', value: sex"></select>
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="SelectSex" class="col-sm-2 control-label navbar-left"> <a class="control-label"> * </a>  @Resources.Language.Ocupation </label>
+            <div class="col-sm-3">
+                <select class="form-control form-control-min"
+                        id="SelectOcupation"
+                        name="SelectOcupation"
+                        data-bind="options: $root.ocupationList, optionsCaption: '@Resources.Language.SelectOcupation', optionsValue : 'Id', optionsText: 'Description', value: ocupation"></select>
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="MonthlyIncome" class="col-sm-2 control-label navbar-left"> <a class="control-label"> * </a>  @Resources.Language.MonthlyIncome </label>
+            <div class="col-sm-3">
+                <input type="number" name="MonthlyIncome" id="MonthlyIncome" class="form-control form-control-min" data-bind="value: monthlyIncome">
+            </div>
+        </div>
+
+        <div class="form-group form-group-min">
+            <label for="RequestedAmount" class="col-sm-2 control-label navbar-left"> <a class="control-label"> * </a>  @Resources.Language.RequestedAmount </label>
+            <div class="col-sm-3">
+                <input type="number" name="RequestedAmount" id="RequestedAmount" class="form-control form-control-min" data-bind="value: requestedAmount">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary pull-right" style="margin-top:15px; margin-left:15px"> @Resources.Language.Send </button>
+        <button data-bind="click: $root.CancelCommand" class="btn btn-primary btn-clear pull-right" style="margin-top:15px"> @Resources.Language.Cancel </button>
+    </form>
+</div>
+
+<div style="display:none" data-bind="with: IdentityValidatorVM, visible : $root.enableIdentity()">
+    <div class="form-group">
+        <div class="jumbotron-title col-sm-12" data-bind="visible: !$root.enableReturn()">
+            <label> @Resources.Language.ValidateIdentity</label>
+        </div>
+        <div class="jumbotron-title col-sm-12" data-bind="visible: $root.enableReturn()">
+            <input id="backButton" class="myLeftButton circle" data-bind="click: $root.Back" value="">
+            <label for="backButton"> @Resources.Language.ReturnNewCredit</label>
+        </div>
+    </div>
+
+    <h4> <strong> @Resources.Language.IdentityValidator </strong>  </h4>
+
+    <div id="creditForm">
+        @Html.Partial("_IdentityValidation")
+    </div>
+
+    <div id="SendButton" data-bind="visible: $root.enableViewSendButton()">
+        <button data-bind="click: $root.GetFormCommand" class="btn btn-primary pull-right btn-submit"> @Resources.Language.Send </button>
+        <button data-bind="click: $root.CancelCommand" class="btn btn-primary pull-right btn-clear"> @Resources.Language.Cancel </button>
+    </div>
+
+</div>
+
+<div style="display:none" data-bind="with: CreditFormVM, visible : $root.enableForm()">
+    <div>
+        <div class="jumbotron-title col-sm-12" data-bind="visible: !$root.enableReturn()">
+            <label> @Resources.Language.CompleteCredit</label>
+        </div>
+        <div class="jumbotron-title  col-sm-12" data-bind="visible: $root.enableReturn()">
+            <input id="backbutton" class="myLeftButton circle" data-bind="click: $root.Back" value="">
+            <label for="backButton"> @Resources.Language.ReturnNewCredit </label>
+        </div>
+    </div>
+
+    <div>
+        <h4> <strong> @Resources.Language.CreditForm </strong> </h4>
+    </div>
+
+    <div class="form-group" data-bind="visible : enableViewSendButton()">
+        <div class="col-sm-12">
+            <label id="Required" class="pull-right"> <a> @Resources.Language.RequiredData </a> </label>
+        </div>
+    </div>
+
+    <div id="creditForm">
+        @Html.Partial("_CreditForm")
+    </div>
+
+</div>
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/knockout")
+
+    <script type="text/javascript" src="~/Scripts/ViewModels/IdentityValidatorViewModel.js"></script>
+    <script type="text/javascript" src="~/Scripts/ViewModels/CreditFormViewModel.js"></script>
+    <script type="text/javascript" src="~/Scripts/ViewModels/NewCreditViewModel.js"></script>
+}

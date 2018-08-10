@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ComercioService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IComercioService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.16.10.221:8080/ComercioService/ComercioService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.16.10.221:8080/ComercioService/ComercioService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.16.10.221:8080/ComercioService/ComercioService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Credipaz.Comercio.Shared.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IComercioService_GetUserIdentification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdentification" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetUserIdentification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdentificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCredits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredits" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCredits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCreditDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditDetail" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCreditDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommerceSellers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommerceSellers" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommerceSellers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommerceSellersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommercePlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommercePlans" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommercePlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommercePlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommerceQuotas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommerceQuotas" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetCommerceQuotas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommerceQuotasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_SaveForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveForm" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_SaveForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditions" />
+  </wsdl:message>
+  <wsdl:message name="IComercioService_GetConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IComercioService">
+    <wsdl:operation name="GetUserIdentification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetUserIdentification" message="tns:IComercioService_GetUserIdentification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetUserIdentificationResponse" message="tns:IComercioService_GetUserIdentification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetUserInfo" message="tns:IComercioService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetUserInfoResponse" message="tns:IComercioService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetCredits" message="tns:IComercioService_GetCredits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetCreditsResponse" message="tns:IComercioService_GetCredits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetCreditDetail" message="tns:IComercioService_GetCreditDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetCreditDetailResponse" message="tns:IComercioService_GetCreditDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommerceSellers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetCommerceSellers" message="tns:IComercioService_GetCommerceSellers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetCommerceSellersResponse" message="tns:IComercioService_GetCommerceSellers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommercePlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetCommercePlans" message="tns:IComercioService_GetCommercePlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetCommercePlansResponse" message="tns:IComercioService_GetCommercePlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommerceQuotas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetCommerceQuotas" message="tns:IComercioService_GetCommerceQuotas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetCommerceQuotasResponse" message="tns:IComercioService_GetCommerceQuotas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/SaveForm" message="tns:IComercioService_SaveForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/SaveFormResponse" message="tns:IComercioService_SaveForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComercioService/GetConditions" message="tns:IComercioService_GetConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComercioService/GetConditionsResponse" message="tns:IComercioService_GetConditions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IComercioService" type="tns:IComercioService">
+    <wsp:PolicyReference URI="#CustomBinding_IComercioService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserIdentification">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetUserIdentification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredits">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetCredits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditDetail">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetCreditDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommerceSellers">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetCommerceSellers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommercePlans">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetCommercePlans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommerceQuotas">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetCommerceQuotas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveForm">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/SaveForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConditions">
+      <soap12:operation soapAction="http://tempuri.org/IComercioService/GetConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ComercioService">
+    <wsdl:port name="CustomBinding_IComercioService" binding="tns:CustomBinding_IComercioService">
+      <soap12:address location="http://172.16.10.221:8080/ComercioService/ComercioService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://172.16.10.221:8080/ComercioService/ComercioService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
